@@ -1,14 +1,13 @@
-import { View, Text, Button} from "react-native"
-import React from "react"
-import { Link } from "expo-router"
-import { useState } from "react" 
-export default () => {
- 
-return (
-<View >
-    <Text>this is the home page</Text>
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 
+const Tab = createMaterialTopTabNavigator();
 
-</View>
-)
+export default function MyTabs() {
+  
+  return (
+    <Tab.Navigator>
+      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Profile" component={ProfileScreen} />
+    </Tab.Navigator>
+  );
 }
